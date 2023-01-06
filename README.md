@@ -23,6 +23,7 @@ This is the repository for an automatic meal planner based on macronutrients. It
 - This is a project intenteded to automatically plan your meals based on macronutrient goals
 - This problem has been solved by various applications (Eat This Much), but my plan was trying to do it by myself because they're quite expensive
 - The purpose of this project is to automatically get a periodic meal plan based on macronutrients of the user
+- It is also an app that calculates an automatic cutting plan based en weight metrics
 
 
 ## Technologies Used
@@ -31,7 +32,8 @@ This is the repository for an automatic meal planner based on macronutrients. It
 
 ## Features
 List the ready features here:
-- Awesome feature 1
+- Calculates automatic cutting plan/projection based on current bodyweight, body fat percentage and 
+  body fat goal
 - Awesome feature 2
 - Awesome feature 3
 
