@@ -1,10 +1,10 @@
-# Automatic Meal Planner
+# Automatic Meal Planner 🍓🍴
 
 This is the repository for an automatic meal planner based on macronutrients. It is created using Python. This project started at 06/01/2023
 
 
 ## Table of Contents
-- [Automatic Meal Planner](#automatic-meal-planner)
+- [Automatic Meal Planner 🍓🍴](#automatic-meal-planner-)
   - [Table of Contents](#table-of-contents)
   - [General Information](#general-information)
   - [Technologies Used](#technologies-used)
