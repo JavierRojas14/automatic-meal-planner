@@ -40,12 +40,13 @@ def calcular_macronutrientes(peso_actual, calorias_a_comer, porcentaje_grasa_a_c
     grs_grasas = round(grs_grasas, 0)
     grs_carbohidratos = round(grs_carbohidratos, 0)
 
-    tabla_resumen = pd.DataFrame([grs_proteinas, grs_grasas, grs_carbohidratos],
+    tabla_resumen = pd.DataFrame({'cantidad_grs': [grs_proteinas, grs_grasas, grs_proteinas],
+                                  'cantidad_kcal': [kcal_proteinas, kcal_grasas, kcal_carbohidratos]},
                                  index=['Proteinas', 'Grasas', 'Carbohidratos'],
-                                 columns=['cantidad_grs'])
+                                 )
 
-    tabla_resumen['%_macronutriente'] = round((tabla_resumen['cantidad_grs'] /
-                                               tabla_resumen['cantidad_grs'].sum()) * 100, 1)
+    tabla_resumen['%_macronutriente'] = round((tabla_resumen['cantidad_kcal'] /
+                                               tabla_resumen['cantidad_kcal'].sum()) * 100, 1)
 
     return tabla_resumen
 
