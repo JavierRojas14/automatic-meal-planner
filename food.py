@@ -42,5 +42,23 @@ def calcular_macronutrientes(peso_actual, calorias_a_comer, porcentaje_grasa_a_c
     return grs_proteinas, grs_grasas, grs_carbohidratos
 
 
+def reportar_macronutrientes_a_comer(grs_proteinas, grs_grasas, grs_carbohidratos):
+    print(f'Debes comer lo siguiente: \n\n'
+          f'Proteinas: {grs_proteinas}\n'
+          f'Carbohidratos: {grs_carbohidratos}\n'
+          f'Grasas: {grs_grasas}')
+
+
+def obtener_metricas():
+    peso_actual = float(input('Cual es tu peso actual?\n> '))
+    calorias_a_comer = float(input('Cuantas calorias debes comer?\n> '))
+    porcentaje_grasa_a_comer = float(input('Cuanto porcentaje de grasas quieres comer?\n> '))
+
+    proteinas, grasas, carbohidratos = calcular_macronutrientes(peso_actual, calorias_a_comer,
+                                                                porcentaje_grasa_a_comer)
+
+    reportar_macronutrientes_a_comer(proteinas, grasas, carbohidratos)
+
+
 if __name__ == '__main__':
-    print(calcular_macronutrientes(74.7, 2150, 0.25))
+    obtener_metricas()
