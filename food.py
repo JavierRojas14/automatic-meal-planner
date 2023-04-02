@@ -3,7 +3,7 @@ Modulo para calcular los macronutrientes basado en las calorias a comer
 '''
 
 import pandas as pd
-PROTEINAS_POR_KG = 1.6
+PROTEINAS_POR_KG = 1.9
 CALORIAS_POR_PROTEINA = 4
 
 CALORIAS_POR_GRASA = 9
@@ -42,7 +42,8 @@ def calcular_macronutrientes(peso_actual, calorias_a_comer, porcentaje_grasa_a_c
 
     tabla_resumen = pd.DataFrame({'cantidad_grs': [grs_proteinas, grs_grasas, grs_carbohidratos],
                                   'cantidad_kcal': [kcal_proteinas, kcal_grasas, kcal_carbohidratos]},
-                                 index=['Proteinas', 'Grasas', 'Carbohidratos'],
+                                 index=['Proteinas', 'Grasas',
+                                        'Carbohidratos'],
                                  )
 
     tabla_resumen['%_macronutriente'] = round((tabla_resumen['cantidad_kcal'] /
@@ -59,7 +60,8 @@ def reportar_macronutrientes_a_comer(tabla_resumen):
 def obtener_metricas():
     peso_actual = float(input('Cual es tu peso actual?\n> '))
     calorias_a_comer = float(input('Cuantas calorias debes comer?\n> '))
-    porcentaje_grasa_a_comer = float(input('Cuanto porcentaje de grasas quieres comer?\n> '))
+    porcentaje_grasa_a_comer = float(
+        input('Cuanto porcentaje de grasas quieres comer?\n> '))
 
     tabla_resumen = calcular_macronutrientes(peso_actual, calorias_a_comer,
                                              porcentaje_grasa_a_comer)
